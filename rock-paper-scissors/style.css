@@ -54,6 +54,7 @@ header > h1 {
 .result {
   font-size: 40px;
   color: white;
+  padding-top: 1em;
 }
 
 .result > p {
@@ -62,7 +63,7 @@ header > h1 {
 }
 
 /* font-awesome icons */
-.far {
+.far, .fas {
   font-size: 5em;
   color: #35d500;
 }
@@ -93,6 +94,10 @@ header > h1 {
   margin-top: 25px;
 }
 
+.text-green-glow {
+  box-shadow: 0 0 10px #2ea732;
+}
+
 .green-glow {
   border: 5px solid #48fe4e;
   box-shadow: 0 0 10px #2ea732;
@@ -106,4 +111,21 @@ header > h1 {
 .grey-glow {
   border: 5px solid #8e8e8e;
   box-shadow: 0 0 10px #545454;
+}
+
+.reset-button {
+  display: block;
+  border: 5px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 6px auto;
+  transition: all 0.4s ease;
+  text-align: center;
+  width: 200px;
+  font-size: 0.6rem;
+}
+
+.reset-button:hover {
+  cursor: pointer;
+  background: #16181d;
 }

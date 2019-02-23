@@ -7,6 +7,8 @@ const result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
+// add reset functionality to reset scores to 0
+const reset_div = document.querySelector(".reset-button");
 
 
 function getComputerChoice() {
@@ -67,17 +69,27 @@ function game(userChoice) {
       tie(userChoice, computerChoice);
       break;
   }
-  
 };
 
 function newFunction() {
   return 'object :';
 }
 
+function reset () {
+  // reset scores to 0 when pressed
+  userScore = 0;
+  computerScore = 0;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+}
+
+
 function main() {
   rock_div.addEventListener('click', () => game("r"));
   paper_div.addEventListener('click', () => game("p"));
   scissors_div.addEventListener('click', () => game("s"));
+
+  reset_div.addEventListener('click', () => reset());
 };
 
 main();

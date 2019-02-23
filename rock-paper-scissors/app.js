@@ -2,6 +2,8 @@ let userScore = 0;
 let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
+const userProfile_i = document.querySelector(".user-profile > i");
+const computerProfile_i = document.querySelector(".computer-profile > i");
 const scoreBoard_div = document.querySelector(".score-board");
 const result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("r");
@@ -23,14 +25,18 @@ function convertToWord(letter) {
   return "Scissors";
 }
 
+
+
 function win(userChoice, computerChoice) {
   const userChoice_div = document.getElementById(userChoice);
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = `${convertToWord(userChoice)} (U) beats ${convertToWord(computerChoice)} (C). You win!`;
+  result_p.innerHTML = `${convertToWord(userChoice)} (U) beats ${convertToWord(computerChoice)} (C). You won 😀!`;
   userChoice_div.classList.add("green-glow");
   setTimeout(() => userChoice_div.classList.remove("green-glow"), 300);
+  userProfile_i.classList.add("player-glow");
+  setTimeout(() => userProfile_i.classList.remove("player-glow"), 300);
 }
 
 function lose(userChoice, computerChoice) {
@@ -38,14 +44,16 @@ function lose(userChoice, computerChoice) {
   computerScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = `${convertToWord(userChoice)} (U) loses to ${convertToWord(computerChoice)} (C). You lost!`;
+  result_p.innerHTML = `${convertToWord(userChoice)} (U) loses to ${convertToWord(computerChoice)} (C). You lost 😩!`;
   userChoice_div.classList.add("red-glow");
   setTimeout(() => userChoice_div.classList.remove("red-glow"), 300);
+  computerProfile_i.classList.add("player-glow");
+  setTimeout(() => computerProfile_i.classList.remove("player-glow"), 300);
 }
 
 function tie(userChoice, computerChoice) {
   const userChoice_div = document.getElementById(userChoice);
-  result_p.innerHTML = `${convertToWord(userChoice)} (U) equals ${convertToWord(computerChoice)} (C). Tie!`;
+  result_p.innerHTML = `${convertToWord(userChoice)} (U) equals ${convertToWord(computerChoice)} (C). Tie 😶!`;
   userChoice_div.classList.add("grey-glow");
   setTimeout(() => userChoice_div.classList.remove("grey-glow"), 300);
 }
@@ -81,6 +89,8 @@ function reset () {
   computerScore = 0;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
+  // also reset text to 'get ready'
+  result_p.innerHTML = "New game: get ready to play!"
 }
 
 

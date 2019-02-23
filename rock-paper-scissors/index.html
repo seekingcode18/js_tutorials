@@ -13,15 +13,21 @@
   <header>
     <h1>Rock Paper Scissors</h1>
   </header>
-
-    <div class="score-board">
+  <section class="score-container">
+    <div class="score-part user-profile">
+      <i class="far fa-user"></i>
+    </div>
+    <div class="score-part score-board">
       <div class="badge" id="user-label">user</div>
       <div class="badge" id="computer-label">comp</div>
       <span id="user-score">0</span>:<span id="computer-score">0</span>
     </div>
-
+    <div class="score-part computer-profile">
+      <i class="fas fa-desktop"></i>
+    </div>
+  </section>
   <div class="result">
-    <p>Get ready to play!</p>
+    <p>New game: get ready to play!</p>
   </div>
   <div class="choices">
     <div class="choice" id="r">
@@ -41,13 +47,13 @@
   <p class="action-message">Make your move...</p>
 
   </div>
-  <div class="feedback">
+  <!-- <div class="feedback">
     <div class="fun">
       <i class="far fa-thumbs-up"></i>
     </div>
     <div class="no-fun">
       <i class="far fa-thumbs-down"></i>
-    </div>
+    </div> -->
     <div class="reset-button" title="Reset scores to 0">
       <i class="fas fa-redo"></i>
     </div>

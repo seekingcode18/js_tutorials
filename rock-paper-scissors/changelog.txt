@@ -10,3 +10,4 @@ Changes from Tenzin's version:
 [ ] add winning total (e.g. first to 21)
 [ ] add SASS to calculate position of user and comp over score board
 [ ] centre colon in scoreboard
+[ ] user can enter their own username, which will display in the scorebox and congratulations message at the end

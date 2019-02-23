@@ -1,0 +1,10 @@
+Changes from Tenzin's version:
+
+1. colour scheme
+2. using font-awesome instead of images
+3. adding more buttons, e.g. reset, had fun, not fun
+4. fixed-height box around result text
+5. custom colour picker? (use JS to change CSS)
+6. user pic or icon instead of subscript
+7. layout with CSS grid
+8. add winning total (e.g. first to 21)

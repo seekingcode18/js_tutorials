@@ -112,11 +112,10 @@ function getColour() {
   const greenRange_input = document.getElementById('green-picker');
   const blueRange_input = document.getElementById('blue-picker');
   // grab player labels to change colour later
-  const userLabel_div = document.querySelector('#user-label');
-  const computerLabel_div = document.querySelector('#computer-label');
+  const profileLabel_div = document.querySelectorAll('.badge');
 
   // grab icons to change colour later
-  const icons_i = document.querySelector('.choice > i')
+  const icons_i = document.querySelectorAll('.colour-icons > i')
 
   // listen for input event on range elements
   redRange_input.addEventListener('input', changeColour); // no parentheses after fn name otherwise it will invoke it immedaitely
@@ -132,11 +131,10 @@ function getColour() {
     let newColour = `rgb(${red},${green},${blue})`
 
     // change player label colour
-    userLabel_div.style.backgroundColor = newColour;
-    computerLabel_div.style.backgroundColor = newColour;
-    // change icon colour
-    icons_i.style.color = newColour;
+    Array.from(profileLabel_div).forEach((i) => i.style.backgroundColor = newColour);
 
+    // change icon colour
+    Array.from(icons_i).forEach((i) => i.style.color = newColour);
   }
 }
 

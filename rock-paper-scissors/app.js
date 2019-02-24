@@ -138,8 +138,37 @@ function getColour() {
   }
 }
 
+// keyboard shortcuts for r, p, s buttons and reset
 
 
+window.addEventListener("keydown", function (k) {
+  switch (k.key) {
+    case "a":
+    case "A":
+    game("r");
+    break;
+    case "s":
+    case "S":
+    game("p");
+    break;
+    case "d":
+    case "D":
+    game("s");
+    break;
+    case "r":
+    case "R":
+    reset();
+    break;
+  }
+})
+
+
+
+// a 65
+// s 83
+// d 68
+// r 82
+// space 32
 
 
 getColour();

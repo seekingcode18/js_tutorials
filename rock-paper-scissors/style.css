@@ -7,6 +7,7 @@
 body {
   background: #292c34;
   font-family: "Asap", sans-serif;
+  color: white;
 }
 
 header {
@@ -162,6 +163,28 @@ header > h1 {
   background: #16181d;
 }
 
+/* --- colour picker --- */
+
+.colour-picker {
+  width: 35%;
+  margin: 2em auto;
+  border: 3px white solid;
+  padding: 25px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.colour-form {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-row-gap: 12px;
+}
+
 label, input {
   display: block;
+  padding: 6px;
 }
+

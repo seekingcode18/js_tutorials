@@ -103,3 +103,31 @@ function main() {
 };
 
 main();
+
+
+// colour picker
+
+function getColour() {
+  const redRange_input = document.getElementById('red-picker');
+  const greenRange_input = document.getElementById('green-picker');
+  const blueRange_input = document.getElementById('blue-picker');
+  const icons = document.querySelectorAll('i');
+  const badge_div = document.getElementsByClassName('badge');
+  redRange_input.addEventListener('input', changeColour); // no parentheses after fn name otherwise it will invoke it immedaitely
+  greenRange_input.addEventListener('input', changeColour);
+  blueRange_input.addEventListener('input', changeColour);
+  function changeColour() {
+    let red = parseInt(document.getElementById('red-picker').value);
+    let green = parseInt(document.getElementById('green-picker').value);
+    let blue = parseInt(document.getElementById('blue-picker').value);
+    // change body background colour with range inputs
+    document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+  }
+}
+
+
+
+
+
+getColour();
+

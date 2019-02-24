@@ -90,6 +90,7 @@ header > h1 {
   font-size: 40px;
   color: white;
   padding-top: 1em;
+  line-height: 1.5;
 }
 
 .result > p {
@@ -159,4 +160,8 @@ header > h1 {
 .reset-button:hover {
   cursor: pointer;
   background: #16181d;
+}
+
+label, input {
+  display: block;
 }

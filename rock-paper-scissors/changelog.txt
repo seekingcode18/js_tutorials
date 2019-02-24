@@ -5,7 +5,8 @@ Changes from Tenzin's version:
 [x] adding more buttons, e.g. reset, had fun, not fun
 [ ] fixed-height box around result text
 [ ] custom colour picker? (use JS to change CSS)
-[ ] user pic or icon instead of subscript
+[x] user pic or icon instead of subscript
+[ ] add keyboard shortcuts
 [ ] layout with CSS grid
 [ ] add winning total (e.g. first to 21)
 [ ] add SASS to calculate position of user and comp over score board

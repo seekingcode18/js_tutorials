@@ -20,6 +20,29 @@ header > h1 {
   text-align: center;
 }
 
+.instructions {
+  background: #bebebe;
+  font-family: monospace;
+  color: black;
+  font-size: 1.2rem;
+  padding: 0 16rem;
+}
+
+.instructions > p {
+  padding: 1rem;
+}
+
+.instructions-heading {
+  padding: 1rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.instructions-list {
+  list-style-type: none;
+  padding: 0 1rem;
+}
+
 .score-container {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
